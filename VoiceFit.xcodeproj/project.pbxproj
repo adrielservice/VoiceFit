@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		132CE1391AED306200173757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1381AED306200173757 /* main.m */; };
+		132CE13C1AED306200173757 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE13B1AED306200173757 /* AppDelegate.m */; };
+		132CE1421AED306200173757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132CE1401AED306200173757 /* Main.storyboard */; };
+		132CE1441AED306200173757 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132CE1431AED306200173757 /* Images.xcassets */; };
+		132CE1471AED306200173757 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 132CE1451AED306200173757 /* LaunchScreen.xib */; };
+		132CE1531AED306200173757 /* VoiceFitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1521AED306200173757 /* VoiceFitTests.m */; };
+		132CE1621AED326F00173757 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132CE1611AED326F00173757 /* QuartzCore.framework */; };
+		132CE1641AED327700173757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132CE1631AED327700173757 /* Foundation.framework */; };
+		132CE1661AED327E00173757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132CE1651AED327E00173757 /* CoreGraphics.framework */; };
+		132CE1681AED328600173757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132CE1671AED328600173757 /* UIKit.framework */; };
+		132CE16D1AED3A4700173757 /* PCChartsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE16A1AED3A4700173757 /* PCChartsTableViewController.m */; };
+		132CE16E1AED3A4700173757 /* PCChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE16C1AED3A4700173757 /* PCChartViewController.m */; };
+		132CE1731AED3A7100173757 /* DTStepModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1721AED3A7100173757 /* DTStepModelController.m */; };
+		132CE1A31AED3EF600173757 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132CE1A21AED3EF600173757 /* CoreMotion.framework */; };
+		A08EE95C06DF23E09B5778D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F7CE02EA6575B9DCE945DA /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		132CE14D1AED306200173757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 132CE12B1AED306200173757 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 132CE1321AED306200173757;
+			remoteInfo = VoiceFit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		069A598EB025B0D0663195B7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		132CE1331AED306200173757 /* VoiceFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		132CE1371AED306200173757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		132CE1381AED306200173757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		132CE13A1AED306200173757 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		132CE13B1AED306200173757 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		132CE1411AED306200173757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		132CE1431AED306200173757 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		132CE1461AED306200173757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		132CE14C1AED306200173757 /* VoiceFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		132CE1511AED306200173757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		132CE1521AED306200173757 /* VoiceFitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceFitTests.m; sourceTree = "<group>"; };
+		132CE1611AED326F00173757 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		132CE1631AED327700173757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		132CE1651AED327E00173757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		132CE1671AED328600173757 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		132CE1691AED3A4700173757 /* PCChartsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCChartsTableViewController.h; path = Charts/PCChartsTableViewController.h; sourceTree = "<group>"; };
+		132CE16A1AED3A4700173757 /* PCChartsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCChartsTableViewController.m; path = Charts/PCChartsTableViewController.m; sourceTree = "<group>"; };
+		132CE16B1AED3A4700173757 /* PCChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCChartViewController.h; path = Charts/PCChartViewController.h; sourceTree = "<group>"; };
+		132CE16C1AED3A4700173757 /* PCChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCChartViewController.m; path = Charts/PCChartViewController.m; sourceTree = "<group>"; };
+		132CE1711AED3A7100173757 /* DTStepModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTStepModelController.h; path = Pedometer/DTStepModelController.h; sourceTree = "<group>"; };
+		132CE1721AED3A7100173757 /* DTStepModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTStepModelController.m; path = Pedometer/DTStepModelController.m; sourceTree = "<group>"; };
+		132CE1A21AED3EF600173757 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		98E3DC87D4F70585D4AF8BA6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A6F7CE02EA6575B9DCE945DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		132CE1301AED306200173757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				132CE1A31AED3EF600173757 /* CoreMotion.framework in Frameworks */,
+				132CE1681AED328600173757 /* UIKit.framework in Frameworks */,
+				132CE1661AED327E00173757 /* CoreGraphics.framework in Frameworks */,
+				132CE1641AED327700173757 /* Foundation.framework in Frameworks */,
+				132CE1621AED326F00173757 /* QuartzCore.framework in Frameworks */,
+				A08EE95C06DF23E09B5778D9 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		132CE1491AED306200173757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		132CE12A1AED306200173757 = {
+			isa = PBXGroup;
+			children = (
+				132CE1351AED306200173757 /* VoiceFit */,
+				132CE1601AED325600173757 /* Frameworks */,
+				132CE14F1AED306200173757 /* VoiceFitTests */,
+				132CE1341AED306200173757 /* Products */,
+				550493441DA2040174F982EA /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		132CE1341AED306200173757 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1331AED306200173757 /* VoiceFit.app */,
+				132CE14C1AED306200173757 /* VoiceFitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		132CE1351AED306200173757 /* VoiceFit */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1741AED3A7600173757 /* Pedometer */,
+				132CE1701AED3A5D00173757 /* Charts */,
+				132CE13A1AED306200173757 /* AppDelegate.h */,
+				132CE13B1AED306200173757 /* AppDelegate.m */,
+				132CE1401AED306200173757 /* Main.storyboard */,
+				132CE1431AED306200173757 /* Images.xcassets */,
+				132CE1451AED306200173757 /* LaunchScreen.xib */,
+				132CE1361AED306200173757 /* Supporting Files */,
+			);
+			path = VoiceFit;
+			sourceTree = "<group>";
+		};
+		132CE1361AED306200173757 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1371AED306200173757 /* Info.plist */,
+				132CE1381AED306200173757 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		132CE14F1AED306200173757 /* VoiceFitTests */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1521AED306200173757 /* VoiceFitTests.m */,
+				132CE1501AED306200173757 /* Supporting Files */,
+			);
+			path = VoiceFitTests;
+			sourceTree = "<group>";
+		};
+		132CE1501AED306200173757 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1511AED306200173757 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		132CE1601AED325600173757 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1A21AED3EF600173757 /* CoreMotion.framework */,
+				132CE1671AED328600173757 /* UIKit.framework */,
+				132CE1651AED327E00173757 /* CoreGraphics.framework */,
+				132CE1631AED327700173757 /* Foundation.framework */,
+				132CE1611AED326F00173757 /* QuartzCore.framework */,
+				A6F7CE02EA6575B9DCE945DA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		132CE1701AED3A5D00173757 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1691AED3A4700173757 /* PCChartsTableViewController.h */,
+				132CE16A1AED3A4700173757 /* PCChartsTableViewController.m */,
+				132CE16B1AED3A4700173757 /* PCChartViewController.h */,
+				132CE16C1AED3A4700173757 /* PCChartViewController.m */,
+			);
+			name = Charts;
+			sourceTree = "<group>";
+		};
+		132CE1741AED3A7600173757 /* Pedometer */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1711AED3A7100173757 /* DTStepModelController.h */,
+				132CE1721AED3A7100173757 /* DTStepModelController.m */,
+			);
+			name = Pedometer;
+			sourceTree = "<group>";
+		};
+		550493441DA2040174F982EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				069A598EB025B0D0663195B7 /* Pods.debug.xcconfig */,
+				98E3DC87D4F70585D4AF8BA6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		132CE1321AED306200173757 /* VoiceFit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 132CE1561AED306300173757 /* Build configuration list for PBXNativeTarget "VoiceFit" */;
+			buildPhases = (
+				55FB7496E4033FE29066F4D7 /* Check Pods Manifest.lock */,
+				132CE12F1AED306200173757 /* Sources */,
+				132CE1301AED306200173757 /* Frameworks */,
+				132CE1311AED306200173757 /* Resources */,
+				3AE7BB0E2A3E271AEBBBA36C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceFit;
+			productName = VoiceFit;
+			productReference = 132CE1331AED306200173757 /* VoiceFit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		132CE14B1AED306200173757 /* VoiceFitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 132CE1591AED306300173757 /* Build configuration list for PBXNativeTarget "VoiceFitTests" */;
+			buildPhases = (
+				132CE1481AED306200173757 /* Sources */,
+				132CE1491AED306200173757 /* Frameworks */,
+				132CE14A1AED306200173757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				132CE14E1AED306200173757 /* PBXTargetDependency */,
+			);
+			name = VoiceFitTests;
+			productName = VoiceFitTests;
+			productReference = 132CE14C1AED306200173757 /* VoiceFitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		132CE12B1AED306200173757 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Genesys;
+				TargetAttributes = {
+					132CE1321AED306200173757 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					132CE14B1AED306200173757 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 132CE1321AED306200173757;
+					};
+				};
+			};
+			buildConfigurationList = 132CE12E1AED306200173757 /* Build configuration list for PBXProject "VoiceFit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 132CE12A1AED306200173757;
+			productRefGroup = 132CE1341AED306200173757 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				132CE1321AED306200173757 /* VoiceFit */,
+				132CE14B1AED306200173757 /* VoiceFitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		132CE1311AED306200173757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				132CE1421AED306200173757 /* Main.storyboard in Resources */,
+				132CE1471AED306200173757 /* LaunchScreen.xib in Resources */,
+				132CE1441AED306200173757 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		132CE14A1AED306200173757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3AE7BB0E2A3E271AEBBBA36C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55FB7496E4033FE29066F4D7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		132CE12F1AED306200173757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				132CE16D1AED3A4700173757 /* PCChartsTableViewController.m in Sources */,
+				132CE13C1AED306200173757 /* AppDelegate.m in Sources */,
+				132CE1731AED3A7100173757 /* DTStepModelController.m in Sources */,
+				132CE16E1AED3A4700173757 /* PCChartViewController.m in Sources */,
+				132CE1391AED306200173757 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		132CE1481AED306200173757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				132CE1531AED306200173757 /* VoiceFitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		132CE14E1AED306200173757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 132CE1321AED306200173757 /* VoiceFit */;
+			targetProxy = 132CE14D1AED306200173757 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		132CE1401AED306200173757 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				132CE1411AED306200173757 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		132CE1451AED306200173757 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				132CE1461AED306200173757 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		132CE1541AED306300173757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		132CE1551AED306300173757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		132CE1571AED306300173757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 069A598EB025B0D0663195B7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VoiceFit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		132CE1581AED306300173757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E3DC87D4F70585D4AF8BA6 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VoiceFit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		132CE15A1AED306300173757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VoiceFitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceFit.app/VoiceFit";
+			};
+			name = Debug;
+		};
+		132CE15B1AED306300173757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VoiceFitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceFit.app/VoiceFit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		132CE12E1AED306200173757 /* Build configuration list for PBXProject "VoiceFit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				132CE1541AED306300173757 /* Debug */,
+				132CE1551AED306300173757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		132CE1561AED306300173757 /* Build configuration list for PBXNativeTarget "VoiceFit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				132CE1571AED306300173757 /* Debug */,
+				132CE1581AED306300173757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		132CE1591AED306300173757 /* Build configuration list for PBXNativeTarget "VoiceFitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				132CE15A1AED306300173757 /* Debug */,
+				132CE15B1AED306300173757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 132CE12B1AED306200173757 /* Project object */;
+}
