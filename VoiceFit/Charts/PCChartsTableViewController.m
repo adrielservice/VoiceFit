@@ -22,7 +22,7 @@
 
         //Add line chart
 
-        viewController.title = @"Report: Line Chart";
+        viewController.title = @"Line Chart";
 
     } else if ([segue.identifier isEqualToString:@"barChart"])
     {
@@ -33,33 +33,30 @@
     {
         //Add circle chart
 
-        viewController.title = @"Report: Circle Chart";
+        viewController.title = @"Circle Chart";
 
     } else if ([segue.identifier isEqualToString:@"pieChart"])
     {
         //Add pie chart
 
-        viewController.title = @"Report: Pie Chart";
+        viewController.title = @"Pie Chart";
     } else if ([segue.identifier isEqualToString:@"scatterChart"])
     {
         //Add scatter chart
         
-        viewController.title = @"Exercise: Scatter Chart";
+        viewController.title = @"Scatter Chart";
     } else if ([segue.identifier isEqualToString:@"steps"])
     {
-        //Add scatter chart
         
-        viewController.title = @"Exercise: Steps (Pedometer)";
+        viewController.title = @"Steps (Pedometer)";
     } else if ([segue.identifier isEqualToString:@"pushups"])
     {
-        //Add scatter chart
         
         viewController.title = @"Pushups";
-    } else if ([segue.identifier isEqualToString:@"squads"])
+    } else if ([segue.identifier isEqualToString:@"squats"])
     {
-        //Add scatter chart
         
-        viewController.title = @"Exercise: squads";
+        viewController.title = @"Squats";
     }
     
 }

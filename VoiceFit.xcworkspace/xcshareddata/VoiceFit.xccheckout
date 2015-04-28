@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>287AA20E-38B1-477E-A409-39007EF37B1D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VoiceFit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>21DEC2707566BD71C62DC156CD9F2B66FA22E76E</key>
+		<string>https://github.com/adrielservice/VoiceFit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VoiceFit.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>21DEC2707566BD71C62DC156CD9F2B66FA22E76E</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/adrielservice/VoiceFit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>21DEC2707566BD71C62DC156CD9F2B66FA22E76E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>21DEC2707566BD71C62DC156CD9F2B66FA22E76E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VoiceFit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

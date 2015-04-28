@@ -21,6 +21,14 @@
 		132CE16E1AED3A4700173757 /* PCChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE16C1AED3A4700173757 /* PCChartViewController.m */; };
 		132CE1731AED3A7100173757 /* DTStepModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1721AED3A7100173757 /* DTStepModelController.m */; };
 		132CE1A31AED3EF600173757 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132CE1A21AED3EF600173757 /* CoreMotion.framework */; };
+		132CE1AD1AEEA0F700173757 /* VoiceFitAPIMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1AC1AEEA0F700173757 /* VoiceFitAPIMgr.m */; };
+		132CE1B61AEEA37500173757 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1B51AEEA37500173757 /* User.m */; };
+		132CE1BA1AEEA3B500173757 /* UserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1B91AEEA3B500173757 /* UserSession.m */; };
+		132CE1BE1AEED22E00173757 /* RegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1BD1AEED22E00173757 /* RegistrationView.m */; };
+		132CE1C11AEEDF9300173757 /* ActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1C01AEEDF9300173757 /* ActivityView.m */; };
+		132CE1CB1AEEE69500173757 /* WorkoutStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1CA1AEEE69500173757 /* WorkoutStats.m */; };
+		132CE1CE1AEEE6B300173757 /* WorkoutSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1CD1AEEE6B300173757 /* WorkoutSummary.m */; };
+		132CE1D41AEF07C700173757 /* PhoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CE1D31AEF07C700173757 /* PhoneView.m */; };
 		A08EE95C06DF23E09B5778D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F7CE02EA6575B9DCE945DA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +66,22 @@
 		132CE1711AED3A7100173757 /* DTStepModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTStepModelController.h; path = Pedometer/DTStepModelController.h; sourceTree = "<group>"; };
 		132CE1721AED3A7100173757 /* DTStepModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTStepModelController.m; path = Pedometer/DTStepModelController.m; sourceTree = "<group>"; };
 		132CE1A21AED3EF600173757 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		132CE1AB1AEEA0F700173757 /* VoiceFitAPIMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceFitAPIMgr.h; path = RestAPI/VoiceFitAPIMgr.h; sourceTree = "<group>"; };
+		132CE1AC1AEEA0F700173757 /* VoiceFitAPIMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceFitAPIMgr.m; path = RestAPI/VoiceFitAPIMgr.m; sourceTree = "<group>"; };
+		132CE1B41AEEA37500173757 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = RestAPI/Model/User.h; sourceTree = "<group>"; };
+		132CE1B51AEEA37500173757 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = RestAPI/Model/User.m; sourceTree = "<group>"; };
+		132CE1B81AEEA3B500173757 /* UserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSession.h; path = RestAPI/Model/UserSession.h; sourceTree = "<group>"; };
+		132CE1B91AEEA3B500173757 /* UserSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSession.m; path = RestAPI/Model/UserSession.m; sourceTree = "<group>"; };
+		132CE1BC1AEED22E00173757 /* RegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationView.h; path = UI/RegistrationView.h; sourceTree = "<group>"; };
+		132CE1BD1AEED22E00173757 /* RegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationView.m; path = UI/RegistrationView.m; sourceTree = "<group>"; };
+		132CE1BF1AEEDF9300173757 /* ActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityView.h; path = UI/ActivityView.h; sourceTree = "<group>"; };
+		132CE1C01AEEDF9300173757 /* ActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityView.m; path = UI/ActivityView.m; sourceTree = "<group>"; };
+		132CE1C91AEEE69500173757 /* WorkoutStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkoutStats.h; path = RestAPI/Model/WorkoutStats.h; sourceTree = "<group>"; };
+		132CE1CA1AEEE69500173757 /* WorkoutStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkoutStats.m; path = RestAPI/Model/WorkoutStats.m; sourceTree = "<group>"; };
+		132CE1CC1AEEE6B300173757 /* WorkoutSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkoutSummary.h; path = RestAPI/Model/WorkoutSummary.h; sourceTree = "<group>"; };
+		132CE1CD1AEEE6B300173757 /* WorkoutSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkoutSummary.m; path = RestAPI/Model/WorkoutSummary.m; sourceTree = "<group>"; };
+		132CE1D21AEF07C700173757 /* PhoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneView.h; path = UI/PhoneView.h; sourceTree = "<group>"; };
+		132CE1D31AEF07C700173757 /* PhoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneView.m; path = UI/PhoneView.m; sourceTree = "<group>"; };
 		98E3DC87D4F70585D4AF8BA6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A6F7CE02EA6575B9DCE945DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +133,8 @@
 		132CE1351AED306200173757 /* VoiceFit */ = {
 			isa = PBXGroup;
 			children = (
+				132CE1BB1AEED20400173757 /* UI */,
+				132CE1A51AEE987400173757 /* RestAPI */,
 				132CE1741AED3A7600173757 /* Pedometer */,
 				132CE1701AED3A5D00173757 /* Charts */,
 				132CE13A1AED306200173757 /* AppDelegate.h */,
@@ -178,6 +204,44 @@
 				132CE1721AED3A7100173757 /* DTStepModelController.m */,
 			);
 			name = Pedometer;
+			sourceTree = "<group>";
+		};
+		132CE1A41AEDFD0900173757 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1B41AEEA37500173757 /* User.h */,
+				132CE1B51AEEA37500173757 /* User.m */,
+				132CE1B81AEEA3B500173757 /* UserSession.h */,
+				132CE1B91AEEA3B500173757 /* UserSession.m */,
+				132CE1C91AEEE69500173757 /* WorkoutStats.h */,
+				132CE1CA1AEEE69500173757 /* WorkoutStats.m */,
+				132CE1CC1AEEE6B300173757 /* WorkoutSummary.h */,
+				132CE1CD1AEEE6B300173757 /* WorkoutSummary.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		132CE1A51AEE987400173757 /* RestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1A41AEDFD0900173757 /* Models */,
+				132CE1AB1AEEA0F700173757 /* VoiceFitAPIMgr.h */,
+				132CE1AC1AEEA0F700173757 /* VoiceFitAPIMgr.m */,
+			);
+			name = RestAPI;
+			sourceTree = "<group>";
+		};
+		132CE1BB1AEED20400173757 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				132CE1BC1AEED22E00173757 /* RegistrationView.h */,
+				132CE1BD1AEED22E00173757 /* RegistrationView.m */,
+				132CE1D21AEF07C700173757 /* PhoneView.h */,
+				132CE1D31AEF07C700173757 /* PhoneView.m */,
+				132CE1BF1AEEDF9300173757 /* ActivityView.h */,
+				132CE1C01AEEDF9300173757 /* ActivityView.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		550493441DA2040174F982EA /* Pods */ = {
@@ -325,7 +389,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				132CE16D1AED3A4700173757 /* PCChartsTableViewController.m in Sources */,
+				132CE1D41AEF07C700173757 /* PhoneView.m in Sources */,
+				132CE1B61AEEA37500173757 /* User.m in Sources */,
 				132CE13C1AED306200173757 /* AppDelegate.m in Sources */,
+				132CE1BE1AEED22E00173757 /* RegistrationView.m in Sources */,
+				132CE1CE1AEEE6B300173757 /* WorkoutSummary.m in Sources */,
+				132CE1CB1AEEE69500173757 /* WorkoutStats.m in Sources */,
+				132CE1BA1AEEA3B500173757 /* UserSession.m in Sources */,
+				132CE1C11AEEDF9300173757 /* ActivityView.m in Sources */,
+				132CE1AD1AEEA0F700173757 /* VoiceFitAPIMgr.m in Sources */,
 				132CE1731AED3A7100173757 /* DTStepModelController.m in Sources */,
 				132CE16E1AED3A4700173757 /* PCChartViewController.m in Sources */,
 				132CE1391AED306200173757 /* main.m in Sources */,

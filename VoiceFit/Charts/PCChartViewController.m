@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 Genesys. All rights reserved.//
 
 #import "PCChartViewController.h"
+
+#import <RestKit/RestKit.h>
+
 #define ARC4RANDOM_MAX 0x100000000
 
 @implementation PCChartViewController
@@ -320,4 +323,5 @@
         [self.pieChart strokeChart];
     }
 }
+
 @end
