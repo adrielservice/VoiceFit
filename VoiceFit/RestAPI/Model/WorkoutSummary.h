@@ -12,6 +12,6 @@
 
 @property (nonatomic, copy) NSString            *activity;
 @property (nonatomic, copy) NSString            *status;
-@property (nonatomic) NSInteger                 totalRemaining;
+@property (nonatomic, copy) NSString            *totalRemaining;
 
 @end

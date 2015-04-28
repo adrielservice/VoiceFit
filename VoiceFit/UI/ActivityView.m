@@ -39,17 +39,11 @@
     VoiceFitAPIMgr *mgr = [VoiceFitAPIMgr sharedManager];
     
     NSString* status = mgr.userSession.workoutSummary.status;
+    NSLog(@"Status: %@", status);
     
-    // is workout completed?
-    if (status && [status caseInsensitiveCompare:@"completed"]) {
-        // navigate to stats
-        self.status.text = @"COMPLETE";
-        self.counter.text = @"00";
-    } else {
-        self.status.text = mgr.userSession.workoutSummary.activity;
-        self.counter.text = [[NSString alloc] initWithFormat:@"%d" arguments:mgr.userSession.workoutSummary.totalRemaining];
-    }
-
+    NSLog(@"%@ : %@", mgr.userSession.workoutSummary.activity, mgr.userSession.workoutSummary.totalRemaining);
+    self.status.text = mgr.userSession.workoutSummary.activity;
+    self.counter.text = mgr.userSession.workoutSummary.totalRemaining;
 }
 
 /*

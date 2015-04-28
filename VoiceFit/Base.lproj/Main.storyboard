@@ -171,8 +171,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAs-2k-FC5">
-                                <rect key="frame" x="87" y="216" width="146" height="98"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <rect key="frame" x="27" y="216" width="266" height="167"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="Call">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -229,7 +229,7 @@
                     <navigationItem key="navigationItem" id="VY2-QG-sV8"/>
                     <connections>
                         <outlet property="counter" destination="iME-S1-uJZ" id="2vd-X2-H9D"/>
-                        <outlet property="status" destination="CcC-6H-099" id="2qu-pe-lhI"/>
+                        <outlet property="status" destination="CcC-6H-099" id="G1G-Cv-Vos"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXK-RA-HNh" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -73,11 +73,8 @@
         
         [[RKObjectManager sharedManager] getObjectsAtPath:workoutPath parameters:nil
                                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                               WorkoutSummary* summary = [[WorkoutSummary alloc] init];
-                                               summary.activity = mappingResult.dictionary[@"activity"];
-                                               summary.status = mappingResult.dictionary[@"status"];
-                                               summary.totalRemaining = mappingResult.dictionary[@"totalRemaining"];
-                                               userSession.workoutSummary = summary;
+                                               
+                                               self.userSession.workoutSummary = [mappingResult array][0];
                                                
                                                [callback update];
                                            }
@@ -97,9 +94,8 @@
         
         [[RKObjectManager sharedManager] postObject:nil path:workoutPath parameters:nil
                                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                               userSession.workoutSummary.activity = mappingResult.dictionary[@"activity"];
-                                               userSession.workoutSummary.status = mappingResult.dictionary[@"status"];
-                                               userSession.workoutSummary.totalRemaining = mappingResult.dictionary[@"totalRemaining"];
+                                               
+                                               self.userSession.workoutSummary = [mappingResult array][0];
                                                
                                                [callback update];
                                            }
@@ -177,7 +173,7 @@
     [workoutSummaryMapping addAttributeMappingsFromDictionary:@{
                                                              @"activity": @"activity",
                                                              @"status": @"status",
-                                                             @"totalRemaining": @"totalRemaining"
+                                                             @"total_remaining": @"totalRemaining"
                                                              }];
     
     // register mappings with the provider using a response descriptor
@@ -198,7 +194,7 @@
     [workoutProgressMapping addAttributeMappingsFromDictionary:@{
                                                                 @"activity": @"activity",
                                                                 @"status": @"status",
-                                                                @"totalRemaining": @"totalRemaining"
+                                                                @"total_remaining": @"totalRemaining"
                                                                 }];
     
     // register mappings with the provider using a response descriptor
