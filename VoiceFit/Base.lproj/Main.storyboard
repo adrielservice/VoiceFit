@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVX-Ta-eO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568" y="897"/>
+            <point key="canvasLocation" x="340" y="897"/>
         </scene>
         <!--Registration View-->
         <scene sceneID="lZ7-y9-DpW">
@@ -102,12 +102,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yw3-EC-dYD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="David" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yw3-EC-dYD">
                                 <rect key="frame" x="16" y="124" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uwl-DG-FRl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Beilis" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uwl-DG-FRl">
                                 <rect key="frame" x="16" y="191" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -118,7 +118,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyn-iT-2vF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+14158128378" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyn-iT-2vF">
                                 <rect key="frame" x="16" y="258" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -148,6 +148,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="registrationStatus" destination="2GZ-fx-HRS" id="Dus-RJ-eIE"/>
                         <outlet property="txtFirstName" destination="yw3-EC-dYD" id="8d4-aQ-Bk5"/>
                         <outlet property="txtLastName" destination="Uwl-DG-FRl" id="zsk-mJ-VPj"/>
                         <outlet property="txtPhoneNumber" destination="vyn-iT-2vF" id="oeA-Xo-sIv"/>
@@ -324,7 +325,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="0Bi-Kn-tJB" kind="push" id="0mL-WU-tTr"/>
+                                            <segue destination="0Bi-Kn-tJB" kind="push" identifier="pieChart" id="0mL-WU-tTr"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

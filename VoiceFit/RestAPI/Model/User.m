@@ -10,4 +10,15 @@
 
 @implementation User
 
++(RKObjectMapping*)defineRequestMapping {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[User class]];
+    
+    [mapping addAttributeMappingsFromDictionary:@{
+                                                  @"username":   @"username",
+                                                  @"phoneNumber":   @"phoneNumber",
+                                                  }];
+    
+    return mapping;
+};
+
 @end

@@ -10,8 +10,8 @@
 
 @interface WorkoutSummary : NSObject
 
-@property (nonatomic, retain) NSString          *activity;
-@property (nonatomic, retain) NSString          *status;
+@property (nonatomic, copy) NSString            *activity;
+@property (nonatomic, copy) NSString            *status;
 @property (nonatomic) NSInteger                 totalRemaining;
 
 @end

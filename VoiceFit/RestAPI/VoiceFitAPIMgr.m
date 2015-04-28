@@ -33,7 +33,7 @@
 
 #pragma mark REST methods
 
-- (void) registerWithUser:(User*) user {
+- (void) registerWithUser:(User*)user callback:(id<UpdateView>)callback{
     
     // clean resources
     if (userSession) {
@@ -47,27 +47,39 @@
     }
     userSession = nil;
     
+    user.username = [user.firstName stringByAppendingString:user.lastName];
+    
     [[RKObjectManager sharedManager] postObject:user path:@"/users" parameters:nil
                                         success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                            userSession = [[UserSession alloc] init];
-                                            userSession.user = user;
-                                            userSession.user.userId = mappingResult.dictionary[@"user_id"];
+                                            NSLog(@"It Worked: %@", [mappingResult array][0]);
+                                            
+                                            self.userSession = [mappingResult array][0];
+                                            self.userSession.user = user;
+                                            self.userSession.phoneNumber = @"18489993383";
+                                            
+                                            NSLog(@"UserId: %@", self.userSession.userId);
+                                            
+                                            [callback update];
                                         }
                                         failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                             NSLog(@"What do you mean by 'there is no coffee?': %@", error);
                                         }];
 };
 
-- (void) getWorkoutSummary {
+- (void) getWorkoutSummaryWithCallback:(id<UpdateView>)callback {
     
-    if (userSession && userSession.user && userSession.user.userId) {
-        NSString *workoutPath = [@"/workout/" stringByAppendingString:userSession.user.userId];
+    if (userSession && userSession.userId) {
+        NSString *workoutPath = [@"/workouts/" stringByAppendingString:userSession.userId];
         
-        WorkoutSummary *workoutSummary = [[WorkoutSummary alloc] init];
-        
-        [[RKObjectManager sharedManager] getObject:workoutSummary path:workoutPath parameters:nil
+        [[RKObjectManager sharedManager] getObjectsAtPath:workoutPath parameters:nil
                                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                               // TODO: Read user ID
+                                               WorkoutSummary* summary = [[WorkoutSummary alloc] init];
+                                               summary.activity = mappingResult.dictionary[@"activity"];
+                                               summary.status = mappingResult.dictionary[@"status"];
+                                               summary.totalRemaining = mappingResult.dictionary[@"totalRemaining"];
+                                               userSession.workoutSummary = summary;
+                                               
+                                               [callback update];
                                            }
                                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                NSLog(@"What do you mean by 'there is no coffee?': %@", error);
@@ -78,15 +90,29 @@
     
 };
 
-- (void) updateWorkoutProgress {
-    
-    if (userSession && userSession.user && userSession.user.userId && userSession.workoutSummary) {
+- (void) updateWorkoutProgressWithCallback:(id<UpdateView>)callback {
+    if (userSession && userSession.userId && userSession.workoutSummary) {
+        NSString *workoutPath = [@"/workouts/" stringByAppendingString:userSession.userId];
+        workoutPath = [workoutPath stringByAppendingString:@"/rep"];
+        
+        [[RKObjectManager sharedManager] postObject:nil path:workoutPath parameters:nil
+                                           success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                               userSession.workoutSummary.activity = mappingResult.dictionary[@"activity"];
+                                               userSession.workoutSummary.status = mappingResult.dictionary[@"status"];
+                                               userSession.workoutSummary.totalRemaining = mappingResult.dictionary[@"totalRemaining"];
+                                               
+                                               [callback update];
+                                           }
+                                           failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                               NSLog(@"What do you mean by 'there is no coffee?': %@", error);
+                                           }];
     } else {
-        NSLog(@"Session is not initialized");
+        NSLog(@"Workout is not initialized");
     }
+    
 };
 
-- (void) getWorkoutStats {
+- (void) getWorkoutStatsWithCallback:(id)callback {
     
 }
 
@@ -109,40 +135,81 @@
 - (void)configureRestKit {
     // initialize AFNetworking HTTPClient
     NSURL *baseURL = [NSURL URLWithString:@"http://52.6.170.226/"];
+    // NSURL *baseURL = [NSURL URLWithString:@"http://172.20.27.208:64939/"];
     AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     
     // initialize RestKit
     RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    [objectManager setRequestSerializationMIMEType: RKMIMETypeJSON];
+    
+    // what to print
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+    RKLogConfigureByName("Restkit/Network", RKLogLevelDebug);
+    
+    //---------------------------------------------------------------------------------------------------
+    
+    
+    RKObjectMapping *userSessionRequestMapping =  [[User defineRequestMapping] inverseMapping];
+    
+    [objectManager addRequestDescriptor: [RKRequestDescriptor requestDescriptorWithMapping:userSessionRequestMapping objectClass:[User class] rootKeyPath:nil method:RKRequestMethodPOST]];
     
     // setup object mappings
-    RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[User class]];
-    [userMapping addAttributeMappingsFromArray:@[@"name"]];
-    
-    // register mappings with the provider using a response descriptor
-    RKResponseDescriptor *responseUserDescriptor =
-    [RKResponseDescriptor responseDescriptorWithMapping:userMapping
-                                                 method:RKRequestMethodGET
-                                            pathPattern:@"/users"
-                                                keyPath:@""
-                                            statusCodes:[NSIndexSet indexSetWithIndex:200]];
-    
-    [objectManager addResponseDescriptor:responseUserDescriptor];
-    
-    // setup object mappings
-    RKObjectMapping *userSessionMapping = [RKObjectMapping mappingForClass:[userSession class]];
-    [userSessionMapping addAttributeMappingsFromArray:@[@"name"]];
+    RKObjectMapping *userSessionResponseMapping = [RKObjectMapping mappingForClass:[UserSession class]];
+    [userSessionResponseMapping addAttributeMappingsFromDictionary:@{
+                                                         @"userId": @"userId",
+                                                         @"phoneNumber": @"phoneNumber"
+                                                         }];
     
     // register mappings with the provider using a response descriptor
     RKResponseDescriptor *responseSessionDescriptor =
-    [RKResponseDescriptor responseDescriptorWithMapping:userSessionMapping
-                                                 method:RKRequestMethodGET
-                                            pathPattern:@"/workouts"
+    [RKResponseDescriptor responseDescriptorWithMapping:userSessionResponseMapping
+                                                 method:RKRequestMethodPOST
+                                            pathPattern:@"users"
                                                 keyPath:@""
                                             statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
     [objectManager addResponseDescriptor:responseSessionDescriptor];
     
+    //---------------------------------------------------------------------------------------------------
     
+    // setup object mappings
+    RKObjectMapping *workoutSummaryMapping = [RKObjectMapping mappingForClass:[WorkoutSummary class]];
+    [workoutSummaryMapping addAttributeMappingsFromDictionary:@{
+                                                             @"activity": @"activity",
+                                                             @"status": @"status",
+                                                             @"totalRemaining": @"totalRemaining"
+                                                             }];
+    
+    // register mappings with the provider using a response descriptor
+    RKResponseDescriptor *responseWorkoutSummaryDescriptor =
+    [RKResponseDescriptor responseDescriptorWithMapping:workoutSummaryMapping
+                                                 method:RKRequestMethodGET
+                                            pathPattern:@"workouts/:user_id"
+                                                keyPath:@""
+                                            statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    [objectManager addResponseDescriptor:responseWorkoutSummaryDescriptor];
+    
+    
+    //---------------------------------------------------------------------------------------------------
+    
+    // setup object mappings
+    RKObjectMapping *workoutProgressMapping = [RKObjectMapping mappingForClass:[WorkoutSummary class]];
+    [workoutProgressMapping addAttributeMappingsFromDictionary:@{
+                                                                @"activity": @"activity",
+                                                                @"status": @"status",
+                                                                @"totalRemaining": @"totalRemaining"
+                                                                }];
+    
+    // register mappings with the provider using a response descriptor
+    RKResponseDescriptor *responseWorkoutProgressDescriptor =
+    [RKResponseDescriptor responseDescriptorWithMapping:workoutProgressMapping
+                                                 method:RKRequestMethodPOST
+                                            pathPattern:@"workouts/:user_id/rep"
+                                                keyPath:@""
+                                            statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    [objectManager addResponseDescriptor:responseWorkoutProgressDescriptor];
 }
 
 

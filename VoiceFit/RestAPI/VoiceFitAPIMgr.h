@@ -10,6 +10,10 @@
 #import "User.h"
 #import "UserSession.h"
 
+@protocol UpdateView <NSObject>
+- (void) update;
+@end
+
 @interface VoiceFitAPIMgr : NSObject {
     UserSession *userSession;
 }
@@ -21,9 +25,9 @@
 - (void) callGenesysFitnessApp;
 
 - (void) configureRestKit;
-- (void) registerWithUser:(User*) user;
-- (void) getWorkoutSummary;
-- (void) updateWorkoutProgress;
-- (void) getWorkoutStats;
+- (void) registerWithUser:(User*)user callback:(id<UpdateView>)callback;
+- (void) getWorkoutSummaryWithCallback:(id<UpdateView>)callback;
+- (void) updateWorkoutProgressWithCallback:(id<UpdateView>)callback;
+- (void) getWorkoutStatsWithCallback:(id<UpdateView>)callback;
 
 @end

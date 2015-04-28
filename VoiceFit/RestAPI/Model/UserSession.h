@@ -14,7 +14,8 @@
 @interface UserSession : NSObject
 
 @property (nonatomic, retain) User              *user;
-@property (nonatomic, retain) NSString          *phoneNumber;
+@property (nonatomic, retain) NSString            *userId;
+@property (nonatomic, retain) NSString            *phoneNumber;
 @property (nonatomic, retain) WorkoutSummary    *workoutSummary;
 @property (nonatomic, retain) WorkoutStats      *workoutStats;
 

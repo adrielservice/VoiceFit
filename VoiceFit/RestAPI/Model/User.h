@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <RKObjectMapping.h>
 
 
 @interface User : NSObject
 
-@property (nonatomic, strong) NSString  *firstName;
-@property (nonatomic, retain) NSString  *lastName;
-@property (nonatomic, retain) NSString  *phoneNumber;
-@property (nonatomic, retain) NSString  *userId;
+@property (nonatomic, copy) NSString  *firstName;
+@property (nonatomic, copy) NSString  *lastName;
+@property (nonatomic, copy) NSString  *username;
+@property (nonatomic, copy) NSString  *phoneNumber;
+
++(RKObjectMapping*)defineRequestMapping;
 
 @end

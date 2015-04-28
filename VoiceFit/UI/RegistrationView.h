@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VoiceFitAPIMgr.h"
 
-@interface RegistrationView : UIViewController
+@protocol UpdateView;
+
+@interface RegistrationView : UIViewController<UpdateView>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFirstName;
 @property (weak, nonatomic) IBOutlet UITextField *txtLastName;

@@ -7,14 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VoiceFitAPIMgr.h"
 
-@protocol ActivityStatusView <NSObject>
+@protocol UpdateView;
 
-- (void) update;
-
-@end
-
-@interface ActivityView : UIViewController<ActivityStatusView>
+@interface ActivityView : UIViewController<UpdateView>
 
 @property (weak, nonatomic) IBOutlet UILabel *status;
 @property (weak, nonatomic) IBOutlet UILabel *counter;

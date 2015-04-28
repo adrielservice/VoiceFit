@@ -40,7 +40,13 @@
     user.lastName = self.txtLastName.text;
     user.phoneNumber = self.txtPhoneNumber.text;
     VoiceFitAPIMgr *mgr = [VoiceFitAPIMgr sharedManager];
-    [mgr registerWithUser:user];
+    [mgr registerWithUser:user callback:self];
+}
+
+#pragma mark - Callback
+
+- (void) update {
+    self.registrationStatus.text = @"Registered";
 }
 
 /*

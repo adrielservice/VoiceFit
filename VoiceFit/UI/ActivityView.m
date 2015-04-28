@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     VoiceFitAPIMgr *mgr = [VoiceFitAPIMgr sharedManager];
-    [mgr getWorkoutSummary];
+    [mgr getWorkoutSummaryWithCallback:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +30,7 @@
 
 - (IBAction)updateActityStatus:(id)sender {
     VoiceFitAPIMgr *mgr = [VoiceFitAPIMgr sharedManager];
-    [mgr updateWorkoutProgress];
+    [mgr updateWorkoutProgressWithCallback:self];
 }
 
 #pragma mark - callbacks

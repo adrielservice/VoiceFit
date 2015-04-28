@@ -136,7 +136,7 @@
     }
     else if ([self.title isEqualToString:@"Pie Chart"])
     {
-        self.titleLabel.text = @"Pie Chart";
+        self.titleLabel.text = @"Workout Report";
         self.leftSwitch.hidden = NO;
         self.rightSwitch.hidden = NO;
         self.leftLabel.hidden = NO;
@@ -144,8 +144,8 @@
         
         
         NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNLightGreen],
-                           [PNPieChartDataItem dataItemWithValue:20 color:PNFreshGreen description:@"WWDC"],
-                           [PNPieChartDataItem dataItemWithValue:40 color:PNDeepGreen description:@"GOOG I/O"],
+                           [PNPieChartDataItem dataItemWithValue:20 color:PNFreshGreen description:@"Situps"],
+                           [PNPieChartDataItem dataItemWithValue:40 color:PNDeepGreen description:@"Pushups"],
                            ];
         
         self.pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(SCREEN_WIDTH /2.0 - 100, 135, 200.0, 200.0) items:items];
